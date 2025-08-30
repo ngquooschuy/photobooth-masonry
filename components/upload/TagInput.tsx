@@ -49,7 +49,7 @@ export default function TagInput({ value, onChange }: TagInputProps) {
   }, []);
 
   const filteredSuggestions = suggestions.filter(
-    (tag) => 
+    (tag) =>
       !value.split(" ").includes(tag) && // Don't show already selected tags
       tag.toLowerCase().includes(value.toLowerCase()) // Case insensitive search
   );
@@ -57,8 +57,8 @@ export default function TagInput({ value, onChange }: TagInputProps) {
   const handleSuggestionClick = (tag: string) => {
     const event = {
       target: {
-        value: value + (value ? " " : "") + tag
-      }
+        value: value + (value ? " " : "") + tag,
+      },
     } as React.ChangeEvent<HTMLInputElement>;
     onChange(event);
     setShowSuggestions(false);

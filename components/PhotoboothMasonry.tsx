@@ -106,7 +106,6 @@ export default function PhotoboothMasonry() {
 
   // Filter items by selected tags
   const filteredItems = useMemo(() => {
-
     if (selectedTags.length === 0) return items;
     return items.filter((item) =>
       item.tags.some((tag) => selectedTags.includes(tag))
