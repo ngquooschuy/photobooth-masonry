@@ -19,8 +19,16 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+*:focus-visible {
+  outline: none;
 }
